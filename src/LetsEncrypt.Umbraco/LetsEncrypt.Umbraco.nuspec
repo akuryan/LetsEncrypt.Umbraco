@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>LetsEncrypt.Umbraco</id>
+    <version>1.0.0</version>
+    <authors>ColoursMinsk team</authors>
+    <owners>ColoursMinsk</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      LetsEncrypt.Umbraco - modifies Umbraco Owin startup to allow serving static files from .well-known directory
+    </description>
+    <projectUrl>https://github.com/akuryan/LetsEncrypt.Umbraco</projectUrl>
+    <copyright>Copyright 2016</copyright>
+    <tags>module, modules, colours utils, Umbraco, LetsEncrypt</tags>
+    <language>en-US</language>
+    <!-- NuGet package dependency -->
+    <dependencies>
+      <dependency id="Microsoft.Owin" version="(3.0,4.0)" />
+      <dependency id="Microsoft.Owin.FileSystems" version="(3.0,4.0)" />
+      <dependency id="Microsoft.Owin.StaticFiles" version="(3.0,4.0)" />
+      <dependency id="Owin" version="1.0" />
+    </dependencies>
+  </metadata>
+  <!-- Example of explicit file inclusion -->
+  <files>
+    <file src="bin\Release\LetsEncrypt.Umbraco.dll" target="lib\net45" />
+    <file src="bin\Release\LetsEncrypt.Umbraco.pdb" target="lib\net45" />
+    <file src="**\*.cs" target="src" />
+    <file src="readme.txt" target="" />
+    <file src="*.xdt" target="content" />
+  </files>
+</package>
