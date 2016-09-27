@@ -57,7 +57,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".well-known\web.config" />
     <None Include="app.config" />
     <None Include="LetsEncrypt.Umbraco.nuspec" />
     <None Include="packages.config" />
