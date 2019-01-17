@@ -3,4 +3,15 @@
   <appSettings>
     <add key="owin:appStartup" value="LetsEncrypt.Umbraco.LetsEncryptStartup, LetsEncrypt.Umbraco" xdt:Transform="SetAttributes(value)" xdt:Locator="Match(key)"/>
   </appSettings>
+  <system.webServer>
+    <rewrite xdt:Transform="InsertIfMissing">
+      <rules xdt:Transform="InsertIfMissing">
+        <clear  xdt:Transform="InsertIfMissing"/>
+        <rule name="LetsEncrypt" stopProcessing="true" xdt:Transform="Insert">
+          <match url="well-known/acme-challenge/" />
+          <action type="None" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
 </configuration>
